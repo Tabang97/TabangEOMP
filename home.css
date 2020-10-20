@@ -1,0 +1,51 @@
+body {
+    background-image: url("Tats.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    text-align: center;
+    font-size: 150%;
+    color: whitesmoke;
+    overflow: hidden;
+
+}
+.Sign{
+    text-align: right;
+    font-style: italic;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: 90px 90px;
+    grid-template-areas: "image" "text" "stats";
+    
+    font-family: roboto;
+    border-radius: 18px;
+    background:whitesmoke;
+    box-shadow: 5px 5px 5px black;
+    text-align:center;
+    width: 300px;
+
+}
+.card-image {
+    grid-area: image;
+    background-image:url("skeleton.png");
+    border-top-left-radius: 30px;
+    border-top-right-radius: 50px;
+    background-size: cover;
+}
+.card-text {
+    grid-area: text;
+    margin: 25px;
+}
+.card-text .date{
+    color: black;
+    font-size: 13px;
+
+}
+.grid-text{
+    grid-area: text;
+}
+.card-stats {
+    grid-area: stats;
+}
