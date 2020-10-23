@@ -60,10 +60,6 @@ ul li a:hover{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.btn{
-    position: absolute;
-    transform: translate((-50%, -50%));
-}
 .grid-text{
     grid-area: text;
 }
@@ -146,7 +142,7 @@ section{
 
   .details{
       position: absolute;
-      top: 50%;
+      /* top: 50%; */
       transform: translateY();
       width: 100%;
       padding: 0 20px;
@@ -159,7 +155,7 @@ section{
       border-radius: 5px;
       display: flex;
       box-shadow: 0 0 10px;
-      float: center;
+      /* float: left; */
   }
   .contacts{
       color: gold;
