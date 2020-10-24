@@ -33,9 +33,85 @@ ul li a:hover{
     background-color: red;
     color: black;
 }
+
+.container_box{
+    position: relative;
+    width: 1200px;
+    height: 500px;
+    margin: 240px auto;
+}
+.container_box .box{
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(300px - 30px);
+    background: black;
+    float: left;
+    margin: 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.container_box .box .icon1{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: gold;
+    transition: 0.5s;
+    z-index: 1;
+}
+.container_box .box:hover .icon1{
+    top: 20px;
+    left: calc(50% - 40%);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.container_box .box:hover .icon1 .fa{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font: 80px;
+    transition: 0.5s;
+    color: white;
+}
+.container_box .box:hover .icon1 .fa{
+    font-size: 80px;
+}
+
+.container_box .box .detail{
+    position: absolute;
+    top: 100%;
+    height: calc(100% -100%);
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    opacity: 0;
+}
+.container_box .box:hover .detail{
+    top: 100px;
+    opacity: 1;
+}
+.container_box .box .detail h3{
+    margin: 0 0 10px;
+    padding: 0;
+    color: white;
+    font-size: 24px;
+}
+.container_box .box .detail p{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
 .main{
     max-width: 1200px;
     margin: auto;
+    
 }
 .main ul{
     display: inline-flex;
@@ -50,8 +126,8 @@ ul li a:hover{
 
 .title h1{
     color: gold;
-    font-size:70px;
-    text-align: center;
+    font-size:50px;
+    text-align: left;
 
 }
 .button {
@@ -109,6 +185,7 @@ section{
 
 .about{
     color: gold;
+    text-align: center;
 
 }
 .cards-list {
@@ -117,19 +194,19 @@ section{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-  }
-  .card .card_image {
+}
+.card .card_image {
     width: inherit;
     height: inherit;
     border-radius: 40px;
-  }
-  .card .card_image img {
+}
+.card .card_image img {
     width: inherit;
     height: inherit;
     border-radius: 40px;
     object-fit: cover;
-  }
-  .card .card_title {
+}
+.card .card_title {
     text-align: center;
     border-radius: 0px 0px 40px 40px;
     font-family: sans-serif;
@@ -137,17 +214,83 @@ section{
     font-size: 30px;
     margin-top: -80px;
     height: 40px;
-  }
+}
   
+.row{
+      width: 85%;
+      margin:auto ;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+}
+.col{
+      flex-basis: 30%;
+      overflow: hidden;
+}
+.card{
+      width: 350px;
+      height: 350px;
+      margin: auto;
+      perspective: 1000px;
+      cursor: pointer;
+}
+.inner-box{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 10px;
+    transition:transform 1s;
+    transform-style:preserve-3d ;
+}
+.card-front, .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility:hidden ;
+    border-radius: 10px;
+}
+.card-front{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+span{
+    display: inline-block;
+    width: 100px;
+    padding:14px 0 ;
+    margin-top: 160px;
+    border-radius: 5px;
+    background: black;
+    color:gold ;
+    transition: transform 1s;
+}
+.card-back{
+    background:black ;
+    transform: rotateX(180deg);
+}
+.card:hover .inner-box{
+    transform:rotateX(-180deg) ;
+}
+.card:hover span{
+    transform: translateY(140px);
+}
+p{
+    display: inline-block;
+    color:gold ;
+    padding-bottom:10px ;
+    border-bottom: 1px solid greenyellow;
+    margin-top: 140px;
+}
 
-  .details{
+.details{
       position: absolute;
       /* top: 50%; */
       transform: translateY();
       width: 100%;
       padding: 0 20px;
-  }
-  .contact-form{
+}
+.contact-form{
       max-width:550px;
       margin: 0 auto;
       background: black;
@@ -156,7 +299,8 @@ section{
       display: flex;
       box-shadow: 0 0 10px;
       /* float: left; */
-  }
-  .contacts{
+}
+.contacts{
       color: gold;
-  }
+      text-align: center;
+}
