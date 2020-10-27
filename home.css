@@ -6,7 +6,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
-    font-size: 150%;
+    font-size: 110%;
     color: white;
     overflow: hidden;
     font-family: Century 'FranklinGothic Medium';
@@ -126,7 +126,7 @@ ul li a:hover{
 
 .title h1{
     color: gold;
-    font-size:50px;
+    font-size:70px;
     text-align: left;
 
 }
@@ -185,7 +185,7 @@ section{
 
 .about{
     color: gold;
-    text-align: center;
+    
 
 }
 .cards-list {
@@ -223,10 +223,7 @@ section{
       align-items: center;
       justify-content: space-between;
 }
-.col{
-      flex-basis: 30%;
-      overflow: hidden;
-}
+
 .card{
       width: 350px;
       height: 350px;
@@ -234,6 +231,7 @@ section{
       perspective: 1000px;
       cursor: pointer;
 }
+
 .inner-box{
     position: relative;
     width: 100%;
@@ -243,6 +241,7 @@ section{
     transition:transform 1s;
     transform-style:preserve-3d ;
 }
+
 .card-front, .card-back{
     position: absolute;
     width: 100%;
@@ -250,11 +249,13 @@ section{
     backface-visibility:hidden ;
     border-radius: 10px;
 }
+
 .card-front{
     background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images.jpeg);
     background-position: center;
     background-size: cover;
 }
+
 span{
     display: inline-block;
     width: 100px;
@@ -269,19 +270,14 @@ span{
     background:black ;
     transform: rotateX(180deg);
 }
+
 .card:hover .inner-box{
     transform:rotateX(-180deg) ;
 }
 .card:hover span{
     transform: translateY(140px);
 }
-p{
-    display: inline-block;
-    color:gold ;
-    padding-bottom:10px ;
-    border-bottom: 1px solid greenyellow;
-    margin-top: 140px;
-}
+
 
 .details{
       position: absolute;
@@ -302,5 +298,4 @@ p{
 }
 .contacts{
       color: gold;
-      text-align: center;
 }
