@@ -136,6 +136,19 @@ ul li a:hover{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.grid-text{
+    grid-area: text;
+}
+.card-stats {
+    grid-area: stats;
+}
+
+
+
+
+
+
+
 
 .FAQ{
     color: gold;
@@ -175,7 +188,6 @@ section{
     
 
 }
-<<<<<<< HEAD
 .cards-list {
     z-index: 0;
     width: 100%;
@@ -243,8 +255,6 @@ section{
     background-position: center;
     background-size: cover;
 }
-=======
->>>>>>> b048fbb40dabbfb3d269edabf3b93f5a7f714497
 
 span{
     display: inline-block;
