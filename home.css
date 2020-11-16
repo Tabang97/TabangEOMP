@@ -111,6 +111,7 @@ ul li a:hover{
 .main{
     max-width: 1200px;
     margin: auto;
+    text-align: center;
     
 }
 .main ul{
@@ -127,8 +128,12 @@ ul li a:hover{
 .title h1{
     color: gold;
     font-size:70px;
-    text-align: left;
+    text-align: center;
+}
 
+
+.sec_card{
+    position: ;
 }
 .button {
     position: absolute;
@@ -217,8 +222,7 @@ section{
 }
   
 .row{
-      width: 85%;
-      margin:auto ;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -256,6 +260,55 @@ section{
     background-size: cover;
 }
 
+
+.card-back{
+    background:black ;
+    transform: rotateX(180deg);
+}
+
+
+
+.card-front1, .card-back1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility:hidden ;
+    border-radius: 10px;
+}
+
+.card-front1{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(skeleton.png);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.card-back1{
+    background:black ;
+    transform: rotateX(180deg);
+}
+
+
+
+.card-front2, .card-back2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility:hidden ;
+    border-radius: 10px;
+}
+
+.card-front2{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(ancient.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+
+.card-back2{
+    background:black ;
+    transform: rotateX(180deg);
+}
 span{
     display: inline-block;
     width: 100px;
@@ -266,10 +319,7 @@ span{
     color:gold ;
     transition: transform 1s;
 }
-.card-back{
-    background:black ;
-    transform: rotateX(180deg);
-}
+
 
 .card:hover .inner-box{
     transform:rotateX(-180deg) ;
